@@ -21,7 +21,7 @@ public class UserEntityService {
         return userRepository.findAll();
     }
 
-    public User findById(Long id) {
+    public User findById(String id) {
         Optional<User> optionalUser = userRepository.findById(id);
         if (optionalUser.isPresent()) {
             return optionalUser.get();
@@ -32,6 +32,11 @@ public class UserEntityService {
     public User save(User user) {
         user = userRepository.save(user);
         return user;
+    }
+
+    public void deleteById(String id)
+    {
+        userRepository.deleteById(id);
     }
 
 }

@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id)
+    public ResponseEntity<User> findById(@PathVariable String id)
     {
         var user = userEntityService.findById(id);
         return new ResponseEntity<>(user, HttpStatus.OK);
@@ -39,4 +39,12 @@ public class UserController {
         var responseUser = userEntityService.save(user);
         return new ResponseEntity<>(responseUser, HttpStatus.CREATED);
     }
+
+    @DeleteMapping
+    public ResponseEntity<String> deleteById(@RequestParam String id)
+    {
+        userEntityService.deleteById(id);
+        return ResponseEntity.ok("User was deleted as successfully");
+    }
+
 }
