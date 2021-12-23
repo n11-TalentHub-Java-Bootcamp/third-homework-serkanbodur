@@ -17,19 +17,21 @@ public class UserEntityService {
 
     private final UserRepository userRepository;
 
-    public List<User> findAll()
-    {
+    public List<User> findAll() {
         return userRepository.findAll();
     }
 
-    public User findById(Long id)
-    {
+    public User findById(Long id) {
         Optional<User> optionalUser = userRepository.findById(id);
-        if(optionalUser.isPresent())
-        {
+        if (optionalUser.isPresent()) {
             return optionalUser.get();
         }
         return null;
+    }
+
+    public User save(User user) {
+        user = userRepository.save(user);
+        return user;
     }
 
 }
