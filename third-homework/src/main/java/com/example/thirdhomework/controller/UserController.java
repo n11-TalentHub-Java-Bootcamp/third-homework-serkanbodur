@@ -2,14 +2,11 @@ package com.example.thirdhomework.controller;
 
 import com.example.thirdhomework.entity.User;
 import com.example.thirdhomework.entityservice.UserEntityService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,7 +16,7 @@ public class UserController {
     private final UserEntityService userEntityService;
 
     @GetMapping("")
-    public MappingJacksonValue findAllUserList()
+    public MappingJacksonValue findAllUsers()
     {
         var userList = userEntityService.findAll();
         var mapping = new MappingJacksonValue(userList);
