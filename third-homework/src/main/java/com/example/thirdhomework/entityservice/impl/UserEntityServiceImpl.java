@@ -1,7 +1,10 @@
 package com.example.thirdhomework.entityservice.impl;
 
+import com.example.thirdhomework.converter.UserConverter;
+import com.example.thirdhomework.dto.UserDTO;
 import com.example.thirdhomework.entity.User;
 import com.example.thirdhomework.entityservice.UserEntityService;
+import com.example.thirdhomework.exception.UserIsNotExistException;
 import com.example.thirdhomework.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,25 +20,31 @@ public class UserEntityServiceImpl implements UserEntityService {
 
     private final UserRepository userRepository;
 
-    public List<User> findAll() {
-        return userRepository.findAll();
-    }
-
-    public User findById(String id) {
-        Optional<User> optionalUser = userRepository.findById(id);
-        if (optionalUser.isPresent()) {
-            return optionalUser.get();
+    public List<UserDTO> findAll() {
+        var users = userRepository.findAll();
+        if(users.isEmpty()) {
+            throw new UserIsNotExistException("There is no user to show!");
         }
-        return null;
+        return UserConverter.INSTANCE.convertAllUsersToUserDTOs(users);
     }
 
-    public User save(User user) {
-        user = userRepository.save(user);
-        return user;
+    public UserDTO findById(String id) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (!(optionalUser.isPresent())) {
+            throw new UserIsNotExistException(("The user with " + id + " id number is not found!"));
+        }
+        return UserConverter.INSTANCE.convertUserToUserDTO(optionalUser.get());
     }
 
-    public void deleteById(String id)
-    {
+    @Override
+    public UserDTO save(UserDTO userDTO) {
+        var comment = UserConverter.INSTANCE.convertUserDTOToUser(userDTO);
+        userRepository.save(comment);
+        return UserConverter.INSTANCE.convertUserToUserDTO(comment);
+    }
+
+    public void deleteById(String id) {
+        userRepository.findById(id).orElseThrow(() -> new UserIsNotExistException("The user with " + id + "id number is not found!"));
         userRepository.deleteById(id);
     }
 

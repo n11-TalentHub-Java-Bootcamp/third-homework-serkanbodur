@@ -1,7 +1,10 @@
 package com.example.thirdhomework.entityservice.impl;
 
+import com.example.thirdhomework.converter.ProductCommentConverter;
+import com.example.thirdhomework.dto.ProductCommentDTO;
 import com.example.thirdhomework.entity.ProductComment;
 import com.example.thirdhomework.entityservice.ProductCommentEntityService;
+import com.example.thirdhomework.exception.CommentIsNotExistException;
 import com.example.thirdhomework.repository.ProductCommentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,29 +20,31 @@ public class ProductCommentEntityServiceImpl implements ProductCommentEntityServ
 
     private final ProductCommentRepository productCommentRepository;
 
-    public List<ProductComment> findAll()
-    {
-        return productCommentRepository.findAll();
-    }
-
-    public ProductComment findById(String id)
-    {
-        Optional<ProductComment> productComment = productCommentRepository.findById(id);
-        if(productComment.isPresent())
-        {
-            return productComment.get();
+    public List<ProductCommentDTO> findAll() {
+        var comments = productCommentRepository.findAll();
+        if(comments.isEmpty()) {
+            throw new CommentIsNotExistException("There is no comment to show!");
         }
-        return null;
+        return ProductCommentConverter.INSTANCE.convertProductCommentsToProductCommentDTOs(comments);
     }
 
-    public ProductComment save(ProductComment productComment)
-    {
-        productComment=productCommentRepository.save(productComment);
-        return productComment;
+    public ProductCommentDTO findById(String id) {
+        Optional<ProductComment> productComment = productCommentRepository.findById(id);
+        if (!(productComment.isPresent())) {
+            throw new CommentIsNotExistException("The comment with " + id + " id number is not found!");
+        }
+        return ProductCommentConverter.INSTANCE.convertProductCommentToProductCommentDTO(productComment.get());
     }
 
-    public void deleteById(String id)
-    {
+    @Override
+    public ProductCommentDTO save(ProductCommentDTO productCommentDTO) {
+        var comment = ProductCommentConverter.INSTANCE.convertProductCommentDTOToProductComment(productCommentDTO);
+        productCommentRepository.save(comment);
+        return ProductCommentConverter.INSTANCE.convertProductCommentToProductCommentDTO(comment);
+    }
+
+    public void deleteById(String id) {
+        productCommentRepository.findById(id).orElseThrow(() -> new CommentIsNotExistException("The comment with " + id + " id number is found!"));
         productCommentRepository.deleteById(id);
     }
 }

@@ -1,13 +1,13 @@
 package com.example.thirdhomework.entityservice;
 
+import com.example.thirdhomework.dto.ProductCommentDTO;
 import com.example.thirdhomework.entity.ProductComment;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProductCommentEntityService {
-    List<ProductComment> findAll();
-    ProductComment findById(String id);
-    ProductComment save(ProductComment productComment);
+    List<ProductCommentDTO> findAll();
+    ProductCommentDTO findById(String id);
+    ProductCommentDTO save(ProductCommentDTO productCommentDTO);
     void deleteById(String id);
 }

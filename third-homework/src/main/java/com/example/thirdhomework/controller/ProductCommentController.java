@@ -1,5 +1,6 @@
 package com.example.thirdhomework.controller;
 
+import com.example.thirdhomework.dto.ProductCommentDTO;
 import com.example.thirdhomework.entity.ProductComment;
 import com.example.thirdhomework.entityservice.ProductCommentEntityService;
 import lombok.RequiredArgsConstructor;
@@ -18,24 +19,24 @@ public class ProductCommentController {
     private final ProductCommentEntityService productCommentEntityService;
 
     @GetMapping()
-    public ResponseEntity<List<ProductComment>> findAllComments()
+    public ResponseEntity<List<ProductCommentDTO>> findAllComments()
     {
-        var comments = productCommentEntityService.findAll();
-        return new ResponseEntity<>(comments, HttpStatus.OK);
+        var commentDTOs = productCommentEntityService.findAll();
+        return new ResponseEntity<>(commentDTOs, HttpStatus.OK);
     }
 
-    @GetMapping({"id"})
-    public ResponseEntity<ProductComment> findById(@PathVariable String id)
+    @GetMapping("{id}")
+    public ResponseEntity<ProductCommentDTO> findById(@PathVariable String id)
     {
-        var productComment = productCommentEntityService.findById(id);
-        return new ResponseEntity<>(productComment,HttpStatus.OK);
+        var productCommentDTO = productCommentEntityService.findById(id);
+        return new ResponseEntity<>(productCommentDTO,HttpStatus.OK);
     }
 
     @PostMapping()
-    public ResponseEntity<ProductComment> save(@RequestBody ProductComment productComment)
+    public ResponseEntity<ProductCommentDTO> save(@RequestBody ProductCommentDTO productCommentDTO)
     {
-        var responseComment = productCommentEntityService.save(productComment);
-        return new ResponseEntity<>(responseComment,HttpStatus.OK);
+        var responseCommentDTO = productCommentEntityService.save(productCommentDTO);
+        return new ResponseEntity<>(responseCommentDTO,HttpStatus.CREATED);
     }
 
     @DeleteMapping
