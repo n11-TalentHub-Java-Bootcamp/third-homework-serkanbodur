@@ -34,4 +34,4 @@ This project is a project using Spring and MongoDB that can do basic CRUD operat
 |       GET      | /api/comments/     | {  }                                                                                                | Get all comments                       |
 |       GET      | /api/comments/{id} | {  }                                                                                                | Get a Comment using id                 |
 |      POST      | /api/comments/     | {  "comment" : "test_comment" , "commentDate" : "2021-10-10" , "productId" : "1" , "userId" : "2" } | Save a Comment                         |
-|     DELETE     | /api/comments/{id} | {  }                                                                                                | Delete a Comment using id as parameter |
+|     DELETE     | /api/comments/     | {  }                                                                                                | Delete a Comment using id as parameter |
