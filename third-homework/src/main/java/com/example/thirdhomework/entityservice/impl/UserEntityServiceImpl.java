@@ -9,13 +9,11 @@ import com.example.thirdhomework.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class UserEntityServiceImpl implements UserEntityService {
 
     private final UserRepository userRepository;

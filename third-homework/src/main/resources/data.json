@@ -1,0 +1,40 @@
+// User
+{ id: "1", name: "first_user", surname: "first_surname",email: "first_email", phone: "1111", userName: "first_username" },
+{ id: "2", name: "second_user", surname: "second_surname",email: "second_email", phone: "2222", userName: "second_username" },
+{ id: "3", name: "third_user", surname: "third_surname",email: "third_email", phone: "3333", userName: "third_username" },
+{ id: "4", name: "fourth_user", surname: "fourth_surname",email: "fourth_email", phone: "4444", userName: "fourth_username" },
+{ id: "5", name: "fiveth_user", surname: "fiveth_surname",email: "fiveth_email", phone: "5555", userName: "fiveth_username" },
+{ id: "6", name: "sixth_user", surname: "sixth_surname",email: "sixth_email", phone: "6666", userName: "sixth_username" },
+{ id: "7", name: "seventh_user", surname: "seventh_surname", phone: "7777",email: "seventh_email", userName: "seventh_username" },
+{ id: "8", name: "eighthed_user", surname: "eighted_surname",email: "eighted_email", phone: "8888", userName: "eighted_username" },
+{ id: "9", name: "nineth_user", surname: "nineth_surname",email: "nineth_email", phone: "9999", userName: "nineth_username" },
+{ id: "10", name: "tenth_user", surname: "tenth_surname",email: "tenth_email", phone: "1010", userName: "tenth_username" }
+
+// Category
+{ id: "1", name: "Moda", breakdown: "1", id_top_category: null },
+{ id: "2", name: "Elektronik", breakdown: "1", id_top_category: null },
+{ id: "3", name: "Ev & Yaşam", breakdown: "1", id_top_category: null },
+{ id: "4", name: "Elbise", breakdown: "2", id_top_category: "1" },
+{ id: "5", name: "Gömlek", breakdown: "2", id_top_category: "1" },
+{ id: "6", name: "Bilgisayar", breakdown: "2", id_top_category: "2" },
+{ id: "7", name: "Dizüstü Bilgisayar", breakdown: "3", id_top_category: "6" },
+{ id: "8", name: "Mobilya", breakdown: "2", id_top_category: "3" },
+{ id: "9", name: "Sehpa", breakdown: "3", id_top_category: "8" },
+
+// Product
+{ id: "1", name: "Mavi Elbise", price: 200, registration_date: new Date("2021-12-01"), id_category: "4" },
+{ id: "2", name: "Kırmızı Elbise", price: 300, registration_date: new Date("2021-12-02"), id_category: "4" },
+{ id: "3", name: "Mavi Gömlek", price: 500, registration_date: new Date("2021-12-03"), id_category: "5" },
+{ id: "4", name: "Sarı Gömlek", price: 450, registration_date: new Date("2021-12-04"), id_category: "5" },
+{ id: "5", name: "HP", price: 15000,registration_date: new Date("2021-12-05"), id_category: "7" },
+{ id: "6", name: "MSI", price: 20000,registration_date: new Date("2021-12-06"), id_category: "7" },
+{ id: "7", name: "Orta Sehpa", price: 600,registration_date: new Date("2021-12-07"), id_category: "9"}
+
+// Product Comment
+{ id: "1", comment: "First Comment", commentDate: new Date("2021-12-01"), productId: "1", userId: "1"},
+{ id: "2", comment: "Second Comment", commentDate: new Date("2021-12-02"), productId: "1", userId: "2"},
+{ id: "3", comment: "Third Comment", commentDate: new Date("2021-12-03"), productId: "2", userId: "3"},
+{ id: "4", comment: "Fourth Comment", commentDate: new Date("2021-12-04"), productId: "3", userId: "3"},
+{ id: "5", comment: "Fiveth Comment", commentDate: new Date("2021-12-05"), productId: "4", userId: "5"},
+{ id: "6", comment: "Sixth Comment", commentDate: new Date("2021-12-06"), productId: "5", userId: "4"},
+{ id: "7", comment: "Seventh Comment", commentDate: new Date("2021-12-07"), productId: "6", userId: "4"}
