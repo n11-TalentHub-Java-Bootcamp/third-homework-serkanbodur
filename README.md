@@ -14,6 +14,11 @@ This project is a project using Spring and MongoDB that can do basic CRUD operat
 - Controller
 - Exceptions
 
+### Basic Usage
+
+- Run project once to create the mongodb documents.
+- Insert the data which classname.json that under of the resources file.
+- Apply the operations according to appropriate endpoints using Postman or Swagger
 
 ### Project End Points
 
