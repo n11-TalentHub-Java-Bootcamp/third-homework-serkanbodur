@@ -18,6 +18,7 @@ public class UserEntityServiceImpl implements UserEntityService {
 
     private final UserRepository userRepository;
 
+    @Override
     public List<UserDTO> findAll() {
         var users = userRepository.findAll();
         if(users.isEmpty()) {
@@ -26,6 +27,7 @@ public class UserEntityServiceImpl implements UserEntityService {
         return UserConverter.INSTANCE.convertAllUsersToUserDTOs(users);
     }
 
+    @Override
     public UserDTO findById(String id) {
         Optional<User> optionalUser = userRepository.findById(id);
         if (!(optionalUser.isPresent())) {
@@ -41,6 +43,7 @@ public class UserEntityServiceImpl implements UserEntityService {
         return UserConverter.INSTANCE.convertUserToUserDTO(user);
     }
 
+    @Override
     public void deleteById(String id) {
         userRepository.findById(id).orElseThrow(() -> new UserIsNotExistException("The user with " + id + "id number is not found!"));
         userRepository.deleteById(id);

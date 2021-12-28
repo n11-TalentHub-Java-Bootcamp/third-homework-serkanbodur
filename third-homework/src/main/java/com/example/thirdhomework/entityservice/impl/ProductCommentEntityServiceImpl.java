@@ -18,6 +18,7 @@ public class ProductCommentEntityServiceImpl implements ProductCommentEntityServ
 
     private final ProductCommentRepository productCommentRepository;
 
+    @Override
     public List<ProductCommentDTO> findAll() {
         var comments = productCommentRepository.findAll();
         if(comments.isEmpty()) {
@@ -26,6 +27,7 @@ public class ProductCommentEntityServiceImpl implements ProductCommentEntityServ
         return ProductCommentConverter.INSTANCE.convertProductCommentsToProductCommentDTOs(comments);
     }
 
+    @Override
     public ProductCommentDTO findById(String id) {
         Optional<ProductComment> productComment = productCommentRepository.findById(id);
         if (!(productComment.isPresent())) {
@@ -41,6 +43,7 @@ public class ProductCommentEntityServiceImpl implements ProductCommentEntityServ
         return ProductCommentConverter.INSTANCE.convertProductCommentToProductCommentDTO(comment);
     }
 
+    @Override
     public void deleteById(String id) {
         productCommentRepository.findById(id).orElseThrow(() -> new CommentIsNotExistException("The comment with " + id + " id number is found!"));
         productCommentRepository.deleteById(id);
