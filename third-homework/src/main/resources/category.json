@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155db"
+  },
+  "id": "1",
+  "name": "Moda",
+  "breakdown": "1",
+  "id_top_category": null
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155dc"
+  },
+  "id": "2",
+  "name": "Elektronik",
+  "breakdown": "1",
+  "id_top_category": null
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155dd"
+  },
+  "id": "3",
+  "name": "Ev & Yaşam",
+  "breakdown": "1",
+  "id_top_category": null
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155de"
+  },
+  "id": "4",
+  "name": "Elbise",
+  "breakdown": "2",
+  "id_top_category": "1"
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155df"
+  },
+  "id": "5",
+  "name": "Gömlek",
+  "breakdown": "2",
+  "id_top_category": "1"
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155e0"
+  },
+  "id": "6",
+  "name": "Bilgisayar",
+  "breakdown": "2",
+  "id_top_category": "2"
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155e1"
+  },
+  "id": "7",
+  "name": "Dizüstü Bilgisayar",
+  "breakdown": "3",
+  "id_top_category": "6"
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155e2"
+  },
+  "id": "8",
+  "name": "Mobilya",
+  "breakdown": "2",
+  "id_top_category": "3"
+},{
+  "_id": {
+    "$oid": "61cacf3c1bc3351c562155e3"
+  },
+  "id": "9",
+  "name": "Sehpa",
+  "breakdown": "3",
+  "id_top_category": "8"
+}]

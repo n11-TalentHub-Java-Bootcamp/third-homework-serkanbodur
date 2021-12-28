@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "61c84d59d0c61a3bbe130be9"
+  },
+  "id": "1",
+  "comment": "First Comment",
+  "commentDate": {
+    "$date": "2021-12-01T00:00:00Z"
+  },
+  "productId": "1",
+  "userId": "1"
+},{
+  "_id": {
+    "$oid": "61caced11bc3351c562155d5"
+  },
+  "id": "2",
+  "comment": "Second Comment",
+  "commentDate": {
+    "$date": "2021-12-02T00:00:00Z"
+  },
+  "productId": "1",
+  "userId": "2"
+},{
+  "_id": {
+    "$oid": "61caced11bc3351c562155d6"
+  },
+  "id": "3",
+  "comment": "Third Comment",
+  "commentDate": {
+    "$date": "2021-12-03T00:00:00Z"
+  },
+  "productId": "2",
+  "userId": "3"
+},{
+  "_id": {
+    "$oid": "61caced11bc3351c562155d7"
+  },
+  "id": "4",
+  "comment": "Fourth Comment",
+  "commentDate": {
+    "$date": "2021-12-04T00:00:00Z"
+  },
+  "productId": "3",
+  "userId": "3"
+},{
+  "_id": {
+    "$oid": "61caced11bc3351c562155d8"
+  },
+  "id": "5",
+  "comment": "Fiveth Comment",
+  "commentDate": {
+    "$date": "2021-12-05T00:00:00Z"
+  },
+  "productId": "4",
+  "userId": "5"
+},{
+  "_id": {
+    "$oid": "61caced11bc3351c562155d9"
+  },
+  "id": "6",
+  "comment": "Sixth Comment",
+  "commentDate": {
+    "$date": "2021-12-06T00:00:00Z"
+  },
+  "productId": "5",
+  "userId": "4"
+},{
+  "_id": {
+    "$oid": "61caced11bc3351c562155da"
+  },
+  "id": "7",
+  "comment": "Seventh Comment",
+  "commentDate": {
+    "$date": "2021-12-07T00:00:00Z"
+  },
+  "productId": "6",
+  "userId": "4"
+}]

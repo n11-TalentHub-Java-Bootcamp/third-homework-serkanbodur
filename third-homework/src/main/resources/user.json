@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7a2"
+  },
+  "id": "1",
+  "name": "first_user",
+  "surname": "first_surname",
+  "email": "first_email",
+  "phone": "1111",
+  "userName": "first_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7a3"
+  },
+  "id": "2",
+  "name": "second_user",
+  "surname": "second_surname",
+  "email": "second_email",
+  "phone": "2222",
+  "userName": "second_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7a4"
+  },
+  "id": "3",
+  "name": "third_user",
+  "surname": "third_surname",
+  "email": "third_email",
+  "phone": "3333",
+  "userName": "third_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7a6"
+  },
+  "id": "5",
+  "name": "fiveth_user",
+  "surname": "fiveth_surname",
+  "email": "fiveth_email",
+  "phone": "5555",
+  "userName": "fiveth_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7a7"
+  },
+  "id": "6",
+  "name": "sixth_user",
+  "surname": "sixth_surname",
+  "email": "sixth_email",
+  "phone": "6666",
+  "userName": "sixth_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7a8"
+  },
+  "id": "7",
+  "name": "seventh_user",
+  "surname": "seventh_surname",
+  "phone": "7777",
+  "email": "seventh_email",
+  "userName": "seventh_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7a9"
+  },
+  "id": "8",
+  "name": "eighthed_user",
+  "surname": "eighted_surname",
+  "email": "eighted_email",
+  "phone": "8888",
+  "userName": "eighted_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7aa"
+  },
+  "id": "9",
+  "name": "nineth_user",
+  "surname": "nineth_surname",
+  "email": "nineth_email",
+  "phone": "9999",
+  "userName": "nineth_username"
+},{
+  "_id": {
+    "$oid": "61c4e60f683c3a2dde4bb7ab"
+  },
+  "id": "10",
+  "name": "tenth_user",
+  "surname": "tenth_surname",
+  "email": "tenth_email",
+  "phone": "1010",
+  "userName": "tenth_username"
+},{
+  "_id": {
+    "$oid": "61c8dd00f5e8146f026eb035"
+  },
+  "name": "test_user",
+  "surname": "test_user_sur",
+  "email": "test@mail.com",
+  "phone": "2233",
+  "_class": "com.example.thirdhomework.entity.User"
+}]

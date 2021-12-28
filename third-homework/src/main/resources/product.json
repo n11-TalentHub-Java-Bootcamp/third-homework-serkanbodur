@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "61cacf6d1bc3351c562155e4"
+  },
+  "id": "1",
+  "name": "Mavi Elbise",
+  "price": 200,
+  "registration_date": {
+    "$date": "2021-12-01T00:00:00Z"
+  },
+  "id_category": "4"
+},{
+  "_id": {
+    "$oid": "61cacf6d1bc3351c562155e5"
+  },
+  "id": "2",
+  "name": "Kırmızı Elbise",
+  "price": 300,
+  "registration_date": {
+    "$date": "2021-12-02T00:00:00Z"
+  },
+  "id_category": "4"
+},{
+  "_id": {
+    "$oid": "61cacf6d1bc3351c562155e6"
+  },
+  "id": "3",
+  "name": "Mavi Gömlek",
+  "price": 500,
+  "registration_date": {
+    "$date": "2021-12-03T00:00:00Z"
+  },
+  "id_category": "5"
+},{
+  "_id": {
+    "$oid": "61cacf6d1bc3351c562155e7"
+  },
+  "id": "4",
+  "name": "Sarı Gömlek",
+  "price": 450,
+  "registration_date": {
+    "$date": "2021-12-04T00:00:00Z"
+  },
+  "id_category": "5"
+},{
+  "_id": {
+    "$oid": "61cacf6d1bc3351c562155e8"
+  },
+  "id": "5",
+  "name": "HP",
+  "price": 15000,
+  "registration_date": {
+    "$date": "2021-12-05T00:00:00Z"
+  },
+  "id_category": "7"
+},{
+  "_id": {
+    "$oid": "61cacf6d1bc3351c562155e9"
+  },
+  "id": "6",
+  "name": "MSI",
+  "price": 20000,
+  "registration_date": {
+    "$date": "2021-12-06T00:00:00Z"
+  },
+  "id_category": "7"
+},{
+  "_id": {
+    "$oid": "61cacf6d1bc3351c562155ea"
+  },
+  "id": "7",
+  "name": "Orta Sehpa",
+  "price": 600,
+  "registration_date": {
+    "$date": "2021-12-07T00:00:00Z"
+  },
+  "id_category": "9"
+}]
