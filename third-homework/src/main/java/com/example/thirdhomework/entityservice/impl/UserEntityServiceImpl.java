@@ -36,9 +36,9 @@ public class UserEntityServiceImpl implements UserEntityService {
 
     @Override
     public UserDTO save(UserDTO userDTO) {
-        var comment = UserConverter.INSTANCE.convertUserDTOToUser(userDTO);
-        userRepository.save(comment);
-        return UserConverter.INSTANCE.convertUserToUserDTO(comment);
+        var user = UserConverter.INSTANCE.convertUserDTOToUser(userDTO);
+        userRepository.save(user);
+        return UserConverter.INSTANCE.convertUserToUserDTO(user);
     }
 
     public void deleteById(String id) {
